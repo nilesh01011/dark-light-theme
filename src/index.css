@@ -1,8 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +14,100 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#dropDownMenu .list {
+  cursor: pointer;
+  transition: 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+#dropDownMenu .list img,
+#dropDownMenu .list label {
+  transition: 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+#dropDownMenu .list:hover img {
+  transform: scale(1.1);
+}
+
+#dropDownMenu .list:hover label {
+  font-weight: 650;
+}
+
+#bookNowTopHeader li {
+  position: relative;
+}
+
+#bookNowTopHeader li.steps::after {
+  content: '';
+  position: absolute;
+  right: 40%;
+  bottom: -80%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #616161;
+  z-index: 10;
+}
+
+#bookNowTopHeader li.active::after {
+  content: '';
+  position: absolute;
+  right: 35%;
+  bottom: -20px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ea3a51;
+  z-index: 10;
+}
+
+#bookNowTopHeader li span {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#bookNowTopHeader li.active span {
+  font-weight: 700;
+}
+
+#bookNowTopHeader li.line {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -12px;
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  display: block;
+  background: #616161;
+}
+
+#QuickActions .cards .whiteImg,
+#QuickActions .cards:hover .redImg {
+  display: none;
+}
+
+#QuickActions .cards:hover .whiteImg {
+  display: block;
+}
+
+#QuickActions .cards button,
+#QuickActions .cards p {
+  color: #000;
+}
+
+#QuickActions .cards:hover p {
+  color: #fff;
+}
+
+#QuickActions .cards:hover button {
+  border-color: #fff;
+  color: #fff;
+  background: #ce0e2d;
+}
+
+#QuickActions .cards button:hover {
+  background: #fff;
+  color: #ce0e2d;
 }

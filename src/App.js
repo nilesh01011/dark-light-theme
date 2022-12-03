@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom"
+import LightPage from './pages/LightPage'
+import DarkPage from "./pages/DarkPage";
+import DynamicTheme from "./pages/DynamicTheme";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path='/dark' element={<DarkPage theme='black' cars='scorpio' />}></Route>
+        <Route path='/booknow' element={<DynamicTheme />}></Route>
+        <Route exact path='/' element={<LightPage theme='white' cars='thar' />}></Route>
+      </Routes>
+    </>
   );
 }
 
