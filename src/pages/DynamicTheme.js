@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
-import Footer from '../components/Footer';
 
 function DynamicTheme() {
     const [themePage, setThemePage] = useState('')
@@ -96,7 +95,6 @@ function DynamicTheme() {
                     </div>
                 </div>
             </div>
-            <Footer theme={themePage} />
         </>
     )
 }
